@@ -32,17 +32,19 @@
     <h2 class="display-3">¿Quieres conocer a nuestras vacas?</h2>
     <hr class="my-4">
     <a class="btn btn-primary btn-lg" role="button" (click)="showCows()">{{textCow}}</a>
-    
-    <div *ngIf="desactivado">
-    <div class="card" *ngFor="let cow of cows">
-        <div class="card-header">
-            Nombre: {{cow.name}}
+
+    <div *ngIf="desactivado" class="desactivado">
+        <div class="card" *ngFor="let cow of cows">
+            <div class="card-header">
+                Nombre: {{cow.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: {{cow._id_legal}}</li>
+                <li class="list-group-item">Género: {{cow.genus}}</li>
+                <li class="list-group-item">Sexo: {{cow.sex}}</li>
+                <li class="list-group-item">Edad: {{cow.age.value}} años</li>
+                <li class="list-group-item">Fecha de nacimiento: {{cow.date_birth}}</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Género: {{cow.genus}}</li>
-            <li class="list-group-item">Sexo: {{cow.sex}}</li>
-            <li class="list-group-item">Fecha de nacimiento: {{cow.date_birth}}</li>
-        </ul>
     </div>
-</div>
 </div>

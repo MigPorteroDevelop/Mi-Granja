@@ -43,5 +43,5 @@ export class CowsComponent implements OnInit {
       this.desactivado = false;
       this.textCow = "¡Descúbrelas!";
     }
-  }
+  };
 }

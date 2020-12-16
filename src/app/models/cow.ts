@@ -5,7 +5,6 @@ export class Cow {
         public genus: string,
         public sex: string,
         public name: string,
-        public createdAt: string,
-        public updatedAt: string
+        public age: any
     ){}
 }
